@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <script src="./src/js/script.js" defer></script>
+</head>
+<body class="bg-darkSlateGray">
+
+  <!-- Sign-up form start -->
+  <main class="flex h-screen md:items-center justify-center bg-gray-100">
+    <div id="main-container" class="bg-white md:rounded-2xl shadow-lg max-w-lg md:max-w-3xl w-full flex flex-col md:flex-row-reverse md:space-x-reverse md:space-x-3">
+      
+      <!-- Illustration Background -->
+      <div class="bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-cover bg-center rounded-b-xl md:rounded-xl h-40 md:h-auto md:w-1/2 md:m-4 md:max-w-sm md:ml-7"></div>
+      
+      <!-- Form Content -->
+      <div class="p-6 md:py-16 md:pr-0 md:pl-10 mt-6 md:mt-0 w-full md:w-1/2 md:flex md:items-center">
+        <div class="md:mx-auto md:max-w-sm">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay Updated!</h2>
+          <p class="text-gray-600 mb-4 text-sm">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="flex flex-col space-y-2 text-sm mb-6">
+            <li class="flex items-center"><span><img src="./src/images/icon-success.svg" alt="" class="h-4 w-4 mr-2"></span>Product discovery and builing what matters</li>
+            <li class="flex items-center"><span><img src="./src/images/icon-success.svg" alt="" class="h-4 w-4 mr-2"></span>Measuring to ensure updates are a success</li>
+            <li class="flex items-center"><span><img src="./src/images/icon-success.svg" alt="" class="h-4 w-4 mr-2"></span>And much more!</li>
+          </ul>
+          <form id="signup-form" class="space-y-5" novalidate>
+            <div>
+              <div id="err-div">
+                <label for="email" class="text-gray-700 font-bold text-sm">Email address</label>
+                <span id="err-message" class="float-end text-xs font-semibold relative top-3 text-red-500"></span>
+              </div>
+              <input type="email" id="email" placeholder="email@example.com" required 
+                     class="mt-2 w-full px-4 py-2 border rounded-md hover:border-l-black hover:border-charcoalGray hover:border-l-2 focus:border-black focus:ring-0 focus:outline-none"/>
+            </div>
+            <button type="submit" class="w-full bg-charcoalGray text-white py-3 rounded-md hover:bg-tomato duration-150 font-bold text-sm">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- success message -->
+    <div id="success-box" class="container hidden bg-white min-h-screen w-full md:max-w-80 md:min-h-fit md:rounded-xl px-10 py-16 md:p-7">
+      <img src="./src/images/icon-success.svg" alt="" class="h-8 w-8 mb-6">
+      <h4 class="font-bold text-2xl mb-5 max-w-sm">Thanks for subscribing!</h4>
+      <p class="text-sm font-light mb-4 max-w-sm">
+        A confirmation email has been sent to <span id="email-filling" class="font-bold"></span>
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button id="dismiss" class="text-white relative -bottom-36 md:bottom-0 w-full py-2 px-3 rounded-md bg-charcoalGray hover:bg-tomato duration-150 text-sm font-bold max-w-sm">Dismiss message</button>
+    </div>
+  </main>
+  
+</body>
+</html>
